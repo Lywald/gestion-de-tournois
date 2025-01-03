@@ -1,0 +1,14 @@
+# Ignore Python cache files
+__pycache__/
+
+# Ignore backup files
+backups/
+
+# Ignore virtual environment
+venv_tournoi/
+
+# Ignore Word document
+tournoiCdC.docx
+
+# Ignore VS Code workspace file
+workspace.code-workspace

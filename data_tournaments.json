@@ -1,0 +1,50 @@
+{
+    "tournaments_data": [
+        {
+            "name": "Tournoi de Pierre",
+            "location": "Figeac",
+            "start_date": "2025-03-28",
+            "end_date": "2052-04-28",
+            "number_of_rounds": 3,
+            "description": "Pierrot organise un tournoi",
+            "rounds": [],
+            "players": []
+        },
+        {
+            "name": "Tournoi de carl",
+            "location": "Nantes",
+            "start_date": "2025-01-01",
+            "end_date": "2025-02-01",
+            "number_of_rounds": 3,
+            "description": "Carlito show",
+            "rounds": [
+                {
+                    "name": "prems",
+                    "start_datetime": "2025-01-03T18:56:22.224381",
+                    "end_datetime": null,
+                    "matches": []
+                },
+                {
+                    "name": "deuz",
+                    "start_datetime": "2025-01-03T18:56:26.056693",
+                    "end_datetime": null,
+                    "matches": []
+                }
+            ],
+            "players": [
+                {
+                    "last_name": "Dupont",
+                    "first_name": "Jean",
+                    "birth_date": "1985-03-12",
+                    "national_id": "FR12345"
+                },
+                {
+                    "last_name": "Martin",
+                    "first_name": "Claire",
+                    "birth_date": "1990-07-24",
+                    "national_id": "FR67890"
+                }
+            ]
+        }
+    ]
+}
