@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import List
 from .match import Match
 
+
 class Round:
     def __init__(self, name: str):
         self.name = name
@@ -19,7 +20,8 @@ class Round:
         return {
             "name": self.name,
             "start_datetime": self.start_datetime.isoformat(),
-            "end_datetime": self.end_datetime.isoformat() if self.end_datetime else None,
+            "end_datetime": (self.end_datetime.isoformat()
+                             if self.end_datetime else None),
             "matches": [match.__dict__ for match in self.matches]
         }
 

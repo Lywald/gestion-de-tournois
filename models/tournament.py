@@ -3,8 +3,12 @@ from typing import List
 from .round import Round
 from .player import Player
 
+
 class Tournament:
-    def __init__(self, name: str, location: str, start_date: date, end_date: date, number_of_rounds: int = 4, description: str = ""):
+    def __init__(
+        self, name: str, location: str, start_date: date, end_date: date,
+        number_of_rounds: int = 4, description: str = ""
+    ):
         self.name = name
         self.location = location
         self.start_date = start_date
@@ -33,4 +37,7 @@ class Tournament:
         }
 
     def __repr__(self):
-        return f"Tournament {self.name} with {len(self.players)} players and {len(self.rounds)} rounds"
+        return (
+            f"Tournament {self.name} with {len(self.players)} players and "
+            f"{len(self.rounds)} rounds"
+        )

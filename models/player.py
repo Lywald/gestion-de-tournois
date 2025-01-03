@@ -1,7 +1,9 @@
 from datetime import date, datetime
 
+
 class Player:
-    def __init__(self, last_name: str, first_name: str, birth_date: date, national_id: str):
+    def __init__(self, last_name: str, first_name: str,
+                 birth_date: date, national_id: str):
         self.last_name = last_name
         self.first_name = first_name
         if isinstance(birth_date, str):

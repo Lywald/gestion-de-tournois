@@ -5,6 +5,7 @@ from models.tournament import Tournament
 from models.round import Round
 from models.match import Match
 
+
 class Controller:
     def __init__(self):
         self.players_data = self.load_players()
@@ -14,12 +15,16 @@ class Controller:
         try:
             with open("data_players.json", "r") as file:
                 data = json.load(file)
-                return [Player(
-                    last_name=p["last_name"],
-                    first_name=p["first_name"],
-                    birth_date=datetime.strptime(p["birth_date"], "%Y-%m-%d").date(),
-                    national_id=p["national_id"]
-                ) for p in data.get("players_data", [])]
+                return [
+                    Player(
+                        last_name=p["last_name"],
+                        first_name=p["first_name"],
+                        birth_date=datetime.strptime(
+                            p["birth_date"], "%Y-%m-%d"
+                        ).date(),
+                        national_id=p["national_id"]
+                    ) for p in data.get("players_data", [])
+                ]
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
@@ -27,17 +32,32 @@ class Controller:
         try:
             with open("data_tournaments.json", "r") as file:
                 data = json.load(file)
-                return [self.dict_to_tournament(t) for t in data.get("tournaments_data", [])]
+                return [
+                    self.dict_to_tournament(t)
+                    for t in data.get("tournaments_data", [])
+                ]
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
     def save_players(self):
         with open("data_players.json", "w") as file:
-            json.dump({"players_data": [player.to_dict() for player in self.players_data]}, file, indent=4)
+            json.dump(
+                {"players_data": [
+                    player.to_dict() for player in self.players_data
+                ]},
+                file,
+                indent=4
+            )
 
     def save_tournaments(self):
         with open("data_tournaments.json", "w") as file:
-            json.dump({"tournaments_data": [tournament.to_dict() for tournament in self.tournaments_data]}, file, indent=4)
+            json.dump(
+                {"tournaments_data": [
+                    t.to_dict() for t in self.tournaments_data
+                ]},
+                file,
+                indent=4
+            )
 
     def refresh_json_files(self):
         """Refresh the JSON files with the current data."""
@@ -82,6 +102,10 @@ class Controller:
     def dict_to_round(self, data):
         round = Round(name=data["name"])
         round.start_datetime = datetime.fromisoformat(data["start_datetime"])
-        round.end_datetime = datetime.fromisoformat(data["end_datetime"]) if data["end_datetime"] else None
+        round.end_datetime = (
+            datetime.fromisoformat(data["end_datetime"])
+            if data["end_datetime"]
+            else None
+        )
         round.matches = [Match(**m) for m in data["matches"]]
         return round
