@@ -19,3 +19,7 @@ Bienvenue dans le programme de gestion de tournois d'échecs, un projet Python s
    ```bash
    git clone https://github.com/ton-repository/gestion-tournoi-echecs.git
    cd gestion-tournoi-echecs
+
+2. Lancer le programme :
+   ```bash
+   python view.py
