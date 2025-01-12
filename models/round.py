@@ -56,7 +56,7 @@ class Round:
             "start_datetime": self.start_datetime.isoformat(),
             "end_datetime": (self.end_datetime.isoformat()
                              if self.end_datetime else None),
-            "matches": [match.__dict__ for match in self.matches]
+            "matches": [match.to_dict() for match in self.matches]
         }
 
     def __repr__(self):

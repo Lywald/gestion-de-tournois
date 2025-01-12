@@ -55,9 +55,9 @@ class Tournament:
 
         This method serializes the Tournament object into a dictionary format,
         which includes all relevant attributes of the tournament such as name,
-        location, start and end dates, number of rounds, description, rounds, 
-        and players. The dates are converted to ISO format strings, and the 
-        rounds and players are also converted to dictionaries using their 
+        location, start and end dates, number of rounds, description, rounds,
+        and players. The dates are converted to ISO format strings, and the
+        rounds and players are also converted to dictionaries using their
         respective `to_dict` methods.
 
         Returns:
