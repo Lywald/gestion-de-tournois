@@ -45,7 +45,8 @@ class Controller:
                         birth_date=datetime.strptime(
                             p["birth_date"], "%Y-%m-%d"
                         ).date(),
-                        national_id=p["national_id"]
+                        national_id=p["national_id"],
+                        total_points=p.get("total_points", 0)
                     ) for p in data.get("players_data", [])
                 ]
         except (FileNotFoundError, json.JSONDecodeError):
@@ -297,24 +298,30 @@ class Controller:
                     print(f"Match: {match.player1} ({match.score1}) vs "
                           f"{match.player2} ({match.score2})")
 
-    def run_tournament(self, tournament_index):
+    def run_tournament(self, tournament_index, display_winner_callback):
         """Run the tournament by calling the matchmaking controller."""
         if tournament_index is None:
             print("Tournoi non sélectionné")
         else:
-            self.run_matchmaking(tournament_index)
+            self.run_matchmaking(tournament_index, display_winner_callback)
             print("Le tournoi a été lancé avec succès.")
         input("Appuyez sur Entrée pour continuer...")
 
-    def run_matchmaking(self, tournament_index):
+    def run_matchmaking(self, tournament_index, display_winner_callback):
         """
         Run the matchmaking process for the specified tournament.
         Args:
             tournament_index (int): Index of the tournament in the list.
+            display_winner_callback (function): A callback function to display the winner of each round.
         """
         if isinstance(tournament_index, int) and 0 <= tournament_index < len(self.tournaments_data):
             tournament = self.tournaments_data[tournament_index]
-            Matchmaking.run_tournament(tournament)
+            tournament.rounds = []  # Clear existing rounds to avoid duplication
+            for player in tournament.players:
+                player.tournament_points = 0  # Reset tournament points for each player
+            all_round_winners = Matchmaking.run_tournament(tournament)
+            for round_number, winners in enumerate(all_round_winners, start=1):
+                display_winner_callback(round_number, winners)
             self.refresh_json_files()
             print(f"Matchmaking completed for tournament: {tournament.name}")
 
@@ -354,7 +361,13 @@ class Controller:
             description=data["description"]
         )
         tournament.rounds = [self.dict_to_round(r) for r in data["rounds"]]
-        tournament.players = [Player(**p) for p in data["players"]]
+        tournament.players = [Player(
+            last_name=p["last_name"],
+            first_name=p["first_name"],
+            birth_date=datetime.strptime(p["birth_date"], "%Y-%m-%d").date(),
+            national_id=p["national_id"],
+            tournament_points=p.get("tournament_points", 0)
+        ) for p in data["players"]]
         return tournament
 
     def dict_to_round(self, data):

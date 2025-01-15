@@ -85,7 +85,10 @@ class Matchmaking:
         Run the tournament round by round.
         Args:
             tournament (Tournament): The tournament object.
+        Returns:
+            list: A list of winners for each round.
         """
+        all_round_winners = []
         for round_number in range(tournament.number_of_rounds):
             print(f"Starting Round {round_number + 1}")
             matches = Matchmaking.create_matches(tournament.players)
@@ -93,12 +96,30 @@ class Matchmaking:
             new_round.matches = matches
             tournament.add_round(new_round)
             Matchmaking.update_player_scores(matches)
-            tournament.players.sort(key=lambda p: p.total_points, reverse=True)
+            tournament.players.sort(key=lambda p: p.tournament_points, reverse=True)
             print(f"Round {round_number + 1} completed")
+
+            # Determine the winners of the current round's matches
+            round_winners = []
+            for match in matches:
+                if match.score1 > match.score2:
+                    round_winners.append(match.player1)
+                elif match.score2 > match.score1:
+                    round_winners.append(match.player2)
+                else:
+                    round_winners.extend([match.player1, match.player2])  # Handle ties
+
+            all_round_winners.append(round_winners)
+
+            # Print the winners of the current round
+            winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in round_winners)
+            print(f"Winner(s) of Round {round_number + 1}: {winner_names}")
 
         print("Tournament completed. Final scores:")
         for player in tournament.players:
-            print(f"{player.first_name} {player.last_name}: {player.total_points} points")
+            print(f"{player.first_name} {player.last_name}: {player.tournament_points} points")
+
+        return all_round_winners
 
     @staticmethod
     def update_player_scores(matches):
@@ -108,5 +129,7 @@ class Matchmaking:
             matches (list): A list of Match objects.
         """
         for match in matches:
+            match.player1.tournament_points += match.score1
             match.player1.total_points += match.score1
+            match.player2.tournament_points += match.score2
             match.player2.total_points += match.score2
