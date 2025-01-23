@@ -18,6 +18,7 @@ class MenuView:
         print_header(current_tournament): Print the header for the menu.
         get_key(): Get a single key press from the user.
         main_menu(controller, current_tournament): Display the main menu and handle user input.
+        print_message(message): Print a message to the console.
     """
     def __init__(self):
         pass
@@ -37,7 +38,7 @@ class MenuView:
         print("\t\tGESTION DE TOURNOIS D'ECHECS")
         print("")
         if current_tournament:
-            print(f"\t\tTOURNOI: {current_tournament.name}\t\t")
+            print(f"\t\tTOURNOI OUVERT: {current_tournament.name}\t\t")
         else:
             print("\t\t_________________________________________________________")
             print("\t\t   Aucun Tournoi Chargé                                  \t\t")
@@ -80,9 +81,9 @@ class MenuView:
             - Press Enter to select the highlighted option.
         """
         options = [
+            "\tCréer un tournoi",
             "\tCharger un tournoi",
-            "\tCharger les matchs",
-            "\tAjouter un tournoi",
+            "\tAfficher les matchs",
             "\tAjouter un joueur",
             "\tAjouter un tour au tournoi chargé",
             "\tLancer le tournoi",
@@ -125,8 +126,27 @@ class MenuView:
         winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in winners)
         print(f"Winner(s) of Round {round_number}: {winner_names}")
 
+    def print_message(self, message):
+        """
+        Print a message to the console.
+        Args:
+            message (str): The message to print.
+        """
+        print(message)
 
-def handle_choice_0(controller, menu_view, current_tournament):
+
+def handle_choice_0(controller):
+    """
+    Handle the choice to add a new tournament.
+    Args:
+        controller: The controller object to manage the data.
+    """
+    print()
+    name = input("Entrez le nom du tournoi: ")
+    controller.add_tournament(name)
+
+
+def handle_choice_1(controller, menu_view, current_tournament):
     """
     Handle the choice to load a tournament.
     Args:
@@ -156,27 +176,21 @@ def handle_choice_0(controller, menu_view, current_tournament):
     return current_tournament
 
 
-def handle_choice_1(controller):
+def handle_choice_2(controller, current_tournament):
     """
     Handle the choice to load matches for a specific round.
     Args:
         controller: The controller object to manage the data.
+        current_tournament: The current tournament object.
     """
-    tournament_index = int(input("Entrez l'index du tournoi: ")) - 1
-    tour_index = int(input("Entrez l'index du tour: ")) - 1
-    controller.load_matches(tournament_index, tour_index)
-    input()
-
-
-def handle_choice_2(controller):
-    """
-    Handle the choice to add a new tournament.
-    Args:
-        controller: The controller object to manage the data.
-    """
-    print()
-    name = input("Entrez le nom du tournoi: ")
-    controller.add_tournament(name)
+    if current_tournament is None:
+        print("Tournoi non sélectionné")
+        input()
+    else:
+        tour_index = int(input("Entrez l'index du tour: ")) - 1
+        tournament_index = controller.tournaments_data.index(current_tournament)
+        controller.load_matches(tournament_index, tour_index)
+        input()
 
 
 def handle_choice_3(controller):
@@ -202,14 +216,19 @@ def handle_choice_3(controller):
     controller.add_player(last_name, first_name, birth_date, national_id)
 
 
-def handle_choice_4(controller):
+def handle_choice_4(controller, current_tournament):
     """
     Handle the choice to add a new round to the loaded tournament.
     Args:
         controller: The controller object to manage the data.
+        current_tournament: The current tournament object.
     """
-    tournament_index = int(input("Index du tournoi chargé: ")) - 1
-    controller.add_tour(tournament_index)
+    if current_tournament is None:
+        print("Tournoi non sélectionné")
+        input()
+    else:
+        tournament_index = controller.tournaments_data.index(current_tournament)
+        controller.add_tour(tournament_index)
 
 
 def handle_choice_5(controller, menu_view, current_tournament):
@@ -228,13 +247,41 @@ def handle_choice_5(controller, menu_view, current_tournament):
         controller.run_tournament(tournament_index, menu_view.display_winner)
 
 
-def handle_choice_6(controller):
+def handle_choice_6(controller, current_tournament):
     """
     Handle the choice to display reports.
     Args:
         controller: The controller object to manage the data.
+        current_tournament: The current tournament object.
     """
-    controller.display_reports()
+    if current_tournament is None:
+        print("Tournoi non sélectionné")
+        input()
+    else:
+        while True:
+            print("\nRapports disponibles:")
+            print("1. Liste de tous les joueurs par ordre alphabétique")
+            print("2. Liste de tous les tournois")
+            print("3. Nom et dates du tournoi ouvert")
+            print("4. Liste des joueurs du tournoi par ordre alphabétique")
+            print("5. Liste de tous les tours du tournoi et de tous les matchs du tour")
+            print("6. Retour au menu principal")
+            choice = input("Choisissez une option: ")
+
+            if choice == '1':
+                controller.report_all_players()
+            elif choice == '2':
+                controller.report_all_tournaments()
+            elif choice == '3':
+                controller.report_tournament_details(current_tournament)
+            elif choice == '4':
+                controller.report_tournament_players(current_tournament)
+            elif choice == '5':
+                controller.report_tournament_rounds_and_matches(current_tournament)
+            elif choice == '6':
+                break
+            else:
+                print("Option invalide, veuillez réessayer.")
 
 
 def handle_choice_7():
@@ -248,7 +295,7 @@ def handle_choice_7():
 
 
 if __name__ == "__main__":
-    controller = Controller()
+    controller = Controller(MenuView())
     menu_view = MenuView()
     current_tournament = None
 
@@ -258,19 +305,19 @@ if __name__ == "__main__":
         choice = menu_view.main_menu(controller, current_tournament)
 
         if choice == 0:
-            current_tournament = handle_choice_0(controller, menu_view, current_tournament)
+            handle_choice_0(controller)
         elif choice == 1:
-            handle_choice_1(controller)
+            current_tournament = handle_choice_1(controller, menu_view, current_tournament)
         elif choice == 2:
-            handle_choice_2(controller)
+            handle_choice_2(controller, current_tournament)
         elif choice == 3:
             handle_choice_3(controller)
         elif choice == 4:
-            handle_choice_4(controller)
+            handle_choice_4(controller, current_tournament)
         elif choice == 5:
             handle_choice_5(controller, menu_view, current_tournament)
         elif choice == 6:
-            handle_choice_6(controller)
+            handle_choice_6(controller, current_tournament)
         elif choice == 7:
             if not handle_choice_7():
                 break

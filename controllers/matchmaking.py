@@ -40,12 +40,15 @@ class Matchmaking:
     """
     A class to handle matchmaking logic for tournaments.
     Methods:
+        __init__(menu_view): Initialize the matchmaking with a MenuView instance.
         create_matches(players): Create matches for a given list of players.
         run_tournament(tournament): Run the tournament round by round.
     """
 
-    @staticmethod
-    def create_matches(players):
+    def __init__(self, menu_view):
+        self.menu_view = menu_view
+
+    def create_matches(self, players):
         """
         Create matches for a given list of players.
         Args:
@@ -59,12 +62,11 @@ class Matchmaking:
             if i + 1 < len(players):
                 player1 = players[i]
                 player2 = players[i + 1]
-                score1, score2 = Matchmaking.assign_scores(player1, player2)
+                score1, score2 = self.assign_scores(player1, player2)
                 matches.append(Match(player1, score1, player2, score2))
         return matches
 
-    @staticmethod
-    def assign_scores(player1, player2):
+    def assign_scores(self, player1, player2):
         """
         Assign scores to players for a match.
         Args:
@@ -79,8 +81,7 @@ class Matchmaking:
         else:
             return 0, 1
 
-    @staticmethod
-    def run_tournament(tournament):
+    def run_tournament(self, tournament):
         """
         Run the tournament round by round.
         Args:
@@ -90,14 +91,14 @@ class Matchmaking:
         """
         all_round_winners = []
         for round_number in range(tournament.number_of_rounds):
-            print(f"Starting Round {round_number + 1}")
-            matches = Matchmaking.create_matches(tournament.players)
+            self.menu_view.print_message(f"Starting Round {round_number + 1}")
+            matches = self.create_matches(tournament.players)
             new_round = Round(name=f"Round {round_number + 1}")
             new_round.matches = matches
             tournament.add_round(new_round)
-            Matchmaking.update_player_scores(matches)
+            self.update_player_scores(matches)
             tournament.players.sort(key=lambda p: p.tournament_points, reverse=True)
-            print(f"Round {round_number + 1} completed")
+            self.menu_view.print_message(f"Round {round_number + 1} completed")
 
             # Determine the winners of the current round's matches
             round_winners = []
@@ -113,16 +114,15 @@ class Matchmaking:
 
             # Print the winners of the current round
             winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in round_winners)
-            print(f"Winner(s) of Round {round_number + 1}: {winner_names}")
+            self.menu_view.print_message(f"Winner(s) of Round {round_number + 1}: {winner_names}")
 
-        print("Tournament completed. Final scores:")
+        self.menu_view.print_message("Tournament completed. Final scores:")
         for player in tournament.players:
-            print(f"{player.first_name} {player.last_name}: {player.tournament_points} points")
+            self.menu_view.print_message(f"{player.first_name} {player.last_name}: {player.tournament_points} points")
 
         return all_round_winners
 
-    @staticmethod
-    def update_player_scores(matches):
+    def update_player_scores(self, matches):
         """
         Update the scores of players based on the match results.
         Args:

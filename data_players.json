@@ -5,7 +5,7 @@
             "first_name": "Jean",
             "birth_date": "1985-03-12",
             "national_id": "FR12345",
-            "total_points": 0,
+            "total_points": 7,
             "tournament_points": 0
         },
         {
@@ -13,7 +13,7 @@
             "first_name": "Claire",
             "birth_date": "1990-07-24",
             "national_id": "FR67890",
-            "total_points": 0,
+            "total_points": 5,
             "tournament_points": 0
         },
         {
@@ -21,7 +21,7 @@
             "first_name": "Paul",
             "birth_date": "1982-11-30",
             "national_id": "FR54321",
-            "total_points": 0,
+            "total_points": 5,
             "tournament_points": 0
         },
         {
@@ -29,7 +29,7 @@
             "first_name": "Alice",
             "birth_date": "1995-06-15",
             "national_id": "FR98765",
-            "total_points": 0,
+            "total_points": 3,
             "tournament_points": 0
         },
         {
