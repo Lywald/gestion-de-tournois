@@ -5,7 +5,7 @@
             "first_name": "Jean",
             "birth_date": "1985-03-12",
             "national_id": "FR12345",
-            "total_points": 7,
+            "total_points": 12,
             "tournament_points": 0
         },
         {
@@ -13,56 +13,56 @@
             "first_name": "Claire",
             "birth_date": "1990-07-24",
             "national_id": "FR67890",
-            "total_points": 5,
-            "tournament_points": 0
+            "total_points": 13,
+            "tournament_points": 3
         },
         {
             "last_name": "Bernard",
             "first_name": "Paul",
             "birth_date": "1982-11-30",
             "national_id": "FR54321",
-            "total_points": 5,
-            "tournament_points": 0
+            "total_points": 11,
+            "tournament_points": 3
         },
         {
             "last_name": "Durand",
             "first_name": "Alice",
             "birth_date": "1995-06-15",
             "national_id": "FR98765",
-            "total_points": 3,
-            "tournament_points": 0
+            "total_points": 11,
+            "tournament_points": 2
         },
         {
             "last_name": "Lemoine",
             "first_name": "Sophie",
             "birth_date": "2000-01-01",
             "national_id": "FR24680",
-            "total_points": 0,
-            "tournament_points": 0
+            "total_points": 6,
+            "tournament_points": 2
         },
         {
             "last_name": "Doe",
             "first_name": "John",
             "birth_date": "1990-01-01",
             "national_id": "123456",
-            "total_points": 0,
-            "tournament_points": 0
+            "total_points": 10,
+            "tournament_points": 1
         },
         {
             "last_name": "Doe",
             "first_name": "John",
             "birth_date": "1990-01-01",
-            "national_id": "123456",
-            "total_points": 0,
-            "tournament_points": 0
+            "national_id": "FR000001",
+            "total_points": 3,
+            "tournament_points": 3
         },
         {
             "last_name": "Dup",
             "first_name": "Pig",
             "birth_date": "2020-01-01",
-            "national_id": "FR12345",
-            "total_points": 0,
-            "tournament_points": 0
+            "national_id": "FR000002",
+            "total_points": 2,
+            "tournament_points": 2
         }
     ]
 }
