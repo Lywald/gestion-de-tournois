@@ -237,7 +237,7 @@ class Controller:
         """Report: List the players of the currently loaded tournament in alphabetical order."""
         if current_tournament:
             players_sorted = sorted(current_tournament.players, key=lambda p: (p.last_name, p.first_name))
-            self.menu_view.print_message(f"\nListe des joueurs du tournoi {current_tournament.name} par ordre alphabétique:")
+            self.menu_view.print_message(f"\nListe alphabétique des joueurs du tournoi {current_tournament.name} :")
             for player in players_sorted:
                 self.menu_view.print_message(f"{player.first_name} {player.last_name} ({player.national_id})")
         else:
@@ -247,11 +247,13 @@ class Controller:
     def report_tournament_rounds_and_matches(self, current_tournament):
         """Report: List all rounds of the currently loaded tournament and all matches of the round."""
         if current_tournament:
-            self.menu_view.print_message(f"\nListe de tous les tours du tournoi {current_tournament.name} et de tous les matchs du tour:")
+            self.menu_view.print_message(f"\nListe des tours du tournoi {current_tournament.name} et ses matchs:")
             for round in current_tournament.rounds:
                 self.menu_view.print_message(f"Round: {round.name}")
                 for match in round.matches:
-                    self.menu_view.print_message(f"  Match: {match.player1} ({match.score1}) vs {match.player2} ({match.score2})")
+                    self.menu_view.print_message(
+                        f"  Match: {match.player1} ({match.score1}) vs {match.player2} ({match.score2})"
+                    )
         else:
             self.menu_view.print_message("Tournoi non sélectionné.")
         input("Appuyez sur Entrée pour continuer...")
@@ -261,8 +263,9 @@ class Controller:
         tournaments_data = self.tournaments_data
         if not (0 <= tournament_index < len(tournaments_data)):
             for player in self.players_data:
-                self.menu_view.print_message(f"\t\tPlayer: {player.first_name} {player.last_name} "
-                      f"({player.national_id})")
+                self.menu_view.print_message(
+                    f"\t\tPlayer: {player.first_name} {player.last_name} ({player.national_id})"
+                )
         else:
             selected_tournament = tournaments_data[tournament_index]
             tournament_players = [
@@ -272,8 +275,9 @@ class Controller:
                 self.menu_view.print_message("Aucun joueur dans le tournoi")
             for player in self.players_data:
                 if player.national_id in tournament_players:
-                    self.menu_view.print_message(f"\t\tPlayer: {player.first_name} {player.last_name} "
-                          f"({player.national_id})")
+                    self.menu_view.print_message(
+                        f"\t\tPlayer: {player.first_name} {player.last_name} ({player.national_id})"
+                    )
 
         if not selected_tournament.rounds:
             self.menu_view.print_message("\t\tAucun tour dans le tournoi")
@@ -290,8 +294,9 @@ class Controller:
                 selected_tour = tours[tour_index]
                 matches = selected_tour.matches
                 for match in matches:
-                    self.menu_view.print_message(f"Match: {match.player1} ({match.score1}) vs "
-                          f"{match.player2} ({match.score2})")
+                    self.menu_view.print_message(
+                        f"Match: {match.player1} ({match.score1}) vs {match.player2} ({match.score2})"
+                    )
 
     def run_tournament(self, tournament_index, display_winner_callback):
         """Run the tournament by calling the matchmaking controller."""
