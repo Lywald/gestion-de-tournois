@@ -264,7 +264,7 @@ class Controller:
         if not (0 <= tournament_index < len(tournaments_data)):
             for player in self.players_data:
                 self.menu_view.print_message(
-                    f"\t\tPlayer: {player.first_name} {player.last_name} ({player.national_id})"
+                    f"\t\tJoueur: {player.first_name} {player.last_name} ({player.national_id})"
                 )
         else:
             selected_tournament = tournaments_data[tournament_index]
@@ -276,13 +276,13 @@ class Controller:
             for player in self.players_data:
                 if player.national_id in tournament_players:
                     self.menu_view.print_message(
-                        f"\t\tPlayer: {player.first_name} {player.last_name} ({player.national_id})"
+                        f"\t\tJoueur: {player.first_name} {player.last_name} ({player.national_id})"
                     )
 
         if not selected_tournament.rounds:
             self.menu_view.print_message("\t\tAucun tour dans le tournoi")
         for round in selected_tournament.rounds:
-            self.menu_view.print_message(f"\t\tRound: {round.name}")
+            self.menu_view.print_message(f"\t\tTour: {round.name}")
 
     def load_matches(self, tournament_index, tour_index):
         """Load matches for the selected tour."""
@@ -320,11 +320,8 @@ class Controller:
             for player in tournament.players:
                 player.tournament_points = 0  # Reset tournament points for each player
             matchmaking = Matchmaking(self.menu_view)
-            all_round_winners = matchmaking.run_tournament(tournament)
-            for round_number, winners in enumerate(all_round_winners, start=1):
-                display_winner_callback(round_number, winners)
+            all_round_winners = matchmaking.run_tournament(tournament)  # noqa: F841
             self.refresh_json_files()
-            self.menu_view.print_message(f"Matchmaking completed for tournament: {tournament.name}")
 
     def get_all_tournaments(self):
         """

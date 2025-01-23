@@ -65,248 +65,7 @@
             "end_date": "2023-06-10",
             "number_of_rounds": 4,
             "description": "Tournoi annuel d'\u00c3\u00a9checs de Paris",
-            "rounds": [
-                {
-                    "name": "Round 1",
-                    "start_datetime": "2025-01-23T19:30:02.446970",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": null,
-                            "score2": 0
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 2",
-                    "start_datetime": "2025-01-23T19:30:02.446970",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score1": 1,
-                            "player2": null,
-                            "score2": 0
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 3",
-                    "start_datetime": "2025-01-23T19:30:02.446970",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": null,
-                            "score2": 0
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 4",
-                    "start_datetime": "2025-01-23T19:30:02.446970",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": null,
-                            "score2": 0
-                        }
-                    ]
-                }
-            ],
+            "rounds": [],
             "players": [
                 {
                     "last_name": "Dupont",
@@ -314,7 +73,7 @@
                     "birth_date": "1985-03-12",
                     "national_id": "FR12345",
                     "total_points": 0,
-                    "tournament_points": 3
+                    "tournament_points": 0
                 },
                 {
                     "last_name": "Lemoine",
@@ -322,7 +81,7 @@
                     "birth_date": "2000-01-01",
                     "national_id": "FR24680",
                     "total_points": 0,
-                    "tournament_points": 3
+                    "tournament_points": 0
                 },
                 {
                     "last_name": "Bernard",
@@ -330,7 +89,7 @@
                     "birth_date": "1982-11-30",
                     "national_id": "FR54321",
                     "total_points": 0,
-                    "tournament_points": 3
+                    "tournament_points": 0
                 },
                 {
                     "last_name": "Martin",
@@ -338,7 +97,7 @@
                     "birth_date": "1990-07-24",
                     "national_id": "FR67890",
                     "total_points": 0,
-                    "tournament_points": 2
+                    "tournament_points": 0
                 },
                 {
                     "last_name": "Durand",
@@ -346,7 +105,7 @@
                     "birth_date": "1995-06-15",
                     "national_id": "FR98765",
                     "total_points": 0,
-                    "tournament_points": 1
+                    "tournament_points": 0
                 }
             ]
         },
@@ -359,65 +118,85 @@
             "description": "desc",
             "rounds": [
                 {
-                    "name": "Round 1",
-                    "start_datetime": "2025-01-23T19:30:24.972757",
+                    "name": "Tour 1",
+                    "start_datetime": "2025-01-23T20:02:07.912207",
                     "end_datetime": null,
                     "matches": [
                         {
                             "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
                                 "total_points": 2,
                                 "tournament_points": 2
                             },
                             "score1": 0,
                             "player2": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 3,
-                                "tournament_points": 3
+                                "last_name": "Bernard",
+                                "first_name": "Paul",
+                                "birth_date": "1982-11-30",
+                                "national_id": "FR54321",
+                                "total_points": 4,
+                                "tournament_points": 4
                             },
                             "score2": 1
                         },
                         {
                             "player1": {
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 1,
+                            "player2": {
                                 "last_name": "Lemoine",
                                 "first_name": "Sophie",
                                 "birth_date": "2000-01-01",
                                 "national_id": "FR24680",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
                                 "total_points": 1,
                                 "tournament_points": 1
                             },
-                            "score2": 1
+                            "score2": 0
                         }
                     ]
                 },
                 {
-                    "name": "Round 2",
-                    "start_datetime": "2025-01-23T19:30:24.972757",
+                    "name": "Tour 2",
+                    "start_datetime": "2025-01-23T20:02:07.912207",
                     "end_datetime": null,
                     "matches": [
+                        {
+                            "player1": {
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score2": 1
+                        },
                         {
                             "player1": {
                                 "last_name": "Bernard",
                                 "first_name": "Paul",
                                 "birth_date": "1982-11-30",
                                 "national_id": "FR54321",
-                                "total_points": 2,
-                                "tournament_points": 2
+                                "total_points": 4,
+                                "tournament_points": 4
                             },
                             "score1": 1,
                             "player2": {
@@ -425,36 +204,16 @@
                                 "first_name": "Alice",
                                 "birth_date": "1995-06-15",
                                 "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
                                 "total_points": 2,
                                 "tournament_points": 2
                             },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
+                            "score2": 0
                         }
                     ]
                 },
                 {
-                    "name": "Round 3",
-                    "start_datetime": "2025-01-23T19:30:24.972757",
+                    "name": "Tour 3",
+                    "start_datetime": "2025-01-23T20:02:07.912207",
                     "end_datetime": null,
                     "matches": [
                         {
@@ -463,26 +222,6 @@
                                 "first_name": "Sophie",
                                 "birth_date": "2000-01-01",
                                 "national_id": "FR24680",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
                                 "total_points": 1,
                                 "tournament_points": 1
                             },
@@ -492,35 +231,8 @@
                                 "first_name": "Paul",
                                 "birth_date": "1982-11-30",
                                 "national_id": "FR54321",
-                                "total_points": 2,
-                                "tournament_points": 2
-                            },
-                            "score2": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 4",
-                    "start_datetime": "2025-01-23T19:30:24.973748",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 1,
-                                "tournament_points": 1
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 2,
-                                "tournament_points": 2
+                                "total_points": 4,
+                                "tournament_points": 4
                             },
                             "score2": 1
                         },
@@ -530,54 +242,101 @@
                                 "first_name": "Claire",
                                 "birth_date": "1990-07-24",
                                 "national_id": "FR67890",
-                                "total_points": 3,
-                                "tournament_points": 3
+                                "total_points": 1,
+                                "tournament_points": 1
                             },
-                            "score1": 1,
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Tour 4",
+                    "start_datetime": "2025-01-23T20:02:07.912207",
+                    "end_datetime": null,
+                    "matches": [
+                        {
+                            "player1": {
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 1
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 0,
                             "player2": {
                                 "last_name": "Bernard",
                                 "first_name": "Paul",
                                 "birth_date": "1982-11-30",
                                 "national_id": "FR54321",
-                                "total_points": 2,
-                                "tournament_points": 2
+                                "total_points": 4,
+                                "tournament_points": 4
                             },
-                            "score2": 0
+                            "score2": 1
                         }
                     ]
                 }
             ],
             "players": [
                 {
-                    "last_name": "Martin",
-                    "first_name": "Claire",
-                    "birth_date": "1990-07-24",
-                    "national_id": "FR67890",
-                    "total_points": 0,
-                    "tournament_points": 3
-                },
-                {
-                    "last_name": "Lemoine",
-                    "first_name": "Sophie",
-                    "birth_date": "2000-01-01",
-                    "national_id": "FR24680",
-                    "total_points": 0,
-                    "tournament_points": 2
-                },
-                {
                     "last_name": "Bernard",
                     "first_name": "Paul",
                     "birth_date": "1982-11-30",
                     "national_id": "FR54321",
-                    "total_points": 0,
-                    "tournament_points": 2
+                    "total_points": 4,
+                    "tournament_points": 4
                 },
                 {
                     "last_name": "Durand",
                     "first_name": "Alice",
                     "birth_date": "1995-06-15",
                     "national_id": "FR98765",
-                    "total_points": 0,
+                    "total_points": 2,
+                    "tournament_points": 2
+                },
+                {
+                    "last_name": "Martin",
+                    "first_name": "Claire",
+                    "birth_date": "1990-07-24",
+                    "national_id": "FR67890",
+                    "total_points": 1,
+                    "tournament_points": 1
+                },
+                {
+                    "last_name": "Lemoine",
+                    "first_name": "Sophie",
+                    "birth_date": "2000-01-01",
+                    "national_id": "FR24680",
+                    "total_points": 1,
                     "tournament_points": 1
                 }
             ]
@@ -979,37 +738,57 @@
             "description": "Tournoi de 8 corrig\u00e9",
             "rounds": [
                 {
-                    "name": "Round 1",
-                    "start_datetime": "2025-01-23T19:39:05.493454",
+                    "name": "Tour 1",
+                    "start_datetime": "2025-01-23T20:01:41.231529",
                     "end_datetime": null,
                     "matches": [
                         {
                             "player1": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "FR000001",
-                                "total_points": 3,
-                                "tournament_points": 3
+                                "last_name": "Bernard",
+                                "first_name": "Paul",
+                                "birth_date": "1982-11-30",
+                                "national_id": "FR54321",
+                                "total_points": 1,
+                                "tournament_points": 1
                             },
                             "score1": 1,
                             "player2": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "123456",
-                                "total_points": 10,
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
                                 "tournament_points": 1
                             },
                             "score2": 0
                         },
                         {
                             "player1": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 11,
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 4,
+                                "tournament_points": 4
+                            },
+                            "score1": 1,
+                            "player2": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "FR000001",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 0
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1985-03-12",
+                                "national_id": "FR12345",
+                                "total_points": 2,
                                 "tournament_points": 2
                             },
                             "score1": 1,
@@ -1025,213 +804,19 @@
                         },
                         {
                             "player1": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 6,
-                                "tournament_points": 2
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 11,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 13,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 12,
-                                "tournament_points": 0
-                            },
-                            "score2": 0
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 2",
-                    "start_datetime": "2025-01-23T19:39:05.493454",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 11,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 12,
-                                "tournament_points": 0
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 13,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 6,
-                                "tournament_points": 2
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Dup",
-                                "first_name": "Pig",
-                                "birth_date": "2020-01-01",
-                                "national_id": "FR000002",
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
                                 "total_points": 2,
                                 "tournament_points": 2
                             },
                             "score1": 1,
                             "player2": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 11,
-                                "tournament_points": 2
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
                                 "last_name": "Doe",
                                 "first_name": "John",
                                 "birth_date": "1990-01-01",
                                 "national_id": "123456",
-                                "total_points": 10,
-                                "tournament_points": 1
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "FR000001",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Round 3",
-                    "start_datetime": "2025-01-23T19:39:05.494524",
-                    "end_datetime": null,
-                    "matches": [
-                        {
-                            "player1": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "FR000001",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Martin",
-                                "first_name": "Claire",
-                                "birth_date": "1990-07-24",
-                                "national_id": "FR67890",
-                                "total_points": 13,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 11,
-                                "tournament_points": 3
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "123456",
-                                "total_points": 10,
-                                "tournament_points": 1
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 12,
-                                "tournament_points": 0
-                            },
-                            "score1": 0,
-                            "player2": {
-                                "last_name": "Durand",
-                                "first_name": "Alice",
-                                "birth_date": "1995-06-15",
-                                "national_id": "FR98765",
-                                "total_points": 11,
-                                "tournament_points": 2
-                            },
-                            "score2": 1
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 6,
-                                "tournament_points": 2
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Dup",
-                                "first_name": "Pig",
-                                "birth_date": "2020-01-01",
-                                "national_id": "FR000002",
                                 "total_points": 2,
                                 "tournament_points": 2
                             },
@@ -1240,8 +825,95 @@
                     ]
                 },
                 {
-                    "name": "Round 4",
-                    "start_datetime": "2025-01-23T19:39:05.494524",
+                    "name": "Tour 2",
+                    "start_datetime": "2025-01-23T20:01:41.231529",
+                    "end_datetime": null,
+                    "matches": [
+                        {
+                            "player1": {
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 4,
+                                "tournament_points": 4
+                            },
+                            "score1": 1,
+                            "player2": {
+                                "last_name": "Bernard",
+                                "first_name": "Paul",
+                                "birth_date": "1982-11-30",
+                                "national_id": "FR54321",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score2": 0
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 1
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1985-03-12",
+                                "national_id": "FR12345",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "123456",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 1
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "FR000001",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Dup",
+                                "first_name": "Pig",
+                                "birth_date": "2020-01-01",
+                                "national_id": "FR000002",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Tour 3",
+                    "start_datetime": "2025-01-23T20:01:41.231529",
                     "end_datetime": null,
                     "matches": [
                         {
@@ -1250,28 +922,8 @@
                                 "first_name": "John",
                                 "birth_date": "1990-01-01",
                                 "national_id": "123456",
-                                "total_points": 10,
-                                "tournament_points": 1
-                            },
-                            "score1": 1,
-                            "player2": {
-                                "last_name": "Doe",
-                                "first_name": "John",
-                                "birth_date": "1990-01-01",
-                                "national_id": "FR000001",
-                                "total_points": 3,
-                                "tournament_points": 3
-                            },
-                            "score2": 0
-                        },
-                        {
-                            "player1": {
-                                "last_name": "Dupont",
-                                "first_name": "Jean",
-                                "birth_date": "1985-03-12",
-                                "national_id": "FR12345",
-                                "total_points": 12,
-                                "tournament_points": 0
+                                "total_points": 2,
+                                "tournament_points": 2
                             },
                             "score1": 0,
                             "player2": {
@@ -1286,71 +938,170 @@
                         },
                         {
                             "player1": {
-                                "last_name": "Bernard",
-                                "first_name": "Paul",
-                                "birth_date": "1982-11-30",
-                                "national_id": "FR54321",
-                                "total_points": 11,
-                                "tournament_points": 3
+                                "last_name": "Martin",
+                                "first_name": "Claire",
+                                "birth_date": "1990-07-24",
+                                "national_id": "FR67890",
+                                "total_points": 1,
+                                "tournament_points": 1
                             },
                             "score1": 1,
                             "player2": {
-                                "last_name": "Lemoine",
-                                "first_name": "Sophie",
-                                "birth_date": "2000-01-01",
-                                "national_id": "FR24680",
-                                "total_points": 6,
+                                "last_name": "Durand",
+                                "first_name": "Alice",
+                                "birth_date": "1995-06-15",
+                                "national_id": "FR98765",
+                                "total_points": 2,
                                 "tournament_points": 2
                             },
                             "score2": 0
                         },
                         {
                             "player1": {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1985-03-12",
+                                "national_id": "FR12345",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 4,
+                                "tournament_points": 4
+                            },
+                            "score2": 1
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "FR000001",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 1,
+                            "player2": {
+                                "last_name": "Bernard",
+                                "first_name": "Paul",
+                                "birth_date": "1982-11-30",
+                                "national_id": "FR54321",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score2": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "Tour 4",
+                    "start_datetime": "2025-01-23T20:01:41.231529",
+                    "end_datetime": null,
+                    "matches": [
+                        {
+                            "player1": {
+                                "last_name": "Bernard",
+                                "first_name": "Paul",
+                                "birth_date": "1982-11-30",
+                                "national_id": "FR54321",
+                                "total_points": 1,
+                                "tournament_points": 1
+                            },
+                            "score1": 0,
+                            "player2": {
+                                "last_name": "Lemoine",
+                                "first_name": "Sophie",
+                                "birth_date": "2000-01-01",
+                                "national_id": "FR24680",
+                                "total_points": 4,
+                                "tournament_points": 4
+                            },
+                            "score2": 1
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "FR000001",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 1,
+                            "player2": {
+                                "last_name": "Dup",
+                                "first_name": "Pig",
+                                "birth_date": "2020-01-01",
+                                "national_id": "FR000002",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score2": 0
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1985-03-12",
+                                "national_id": "FR12345",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 1,
+                            "player2": {
                                 "last_name": "Durand",
                                 "first_name": "Alice",
                                 "birth_date": "1995-06-15",
                                 "national_id": "FR98765",
-                                "total_points": 11,
+                                "total_points": 2,
                                 "tournament_points": 2
                             },
-                            "score1": 0,
+                            "score2": 0
+                        },
+                        {
+                            "player1": {
+                                "last_name": "Doe",
+                                "first_name": "John",
+                                "birth_date": "1990-01-01",
+                                "national_id": "123456",
+                                "total_points": 2,
+                                "tournament_points": 2
+                            },
+                            "score1": 1,
                             "player2": {
                                 "last_name": "Martin",
                                 "first_name": "Claire",
                                 "birth_date": "1990-07-24",
                                 "national_id": "FR67890",
-                                "total_points": 13,
-                                "tournament_points": 3
+                                "total_points": 1,
+                                "tournament_points": 1
                             },
-                            "score2": 1
+                            "score2": 0
                         }
                     ]
                 }
             ],
             "players": [
                 {
+                    "last_name": "Lemoine",
+                    "first_name": "Sophie",
+                    "birth_date": "2000-01-01",
+                    "national_id": "FR24680",
+                    "total_points": 4,
+                    "tournament_points": 4
+                },
+                {
                     "last_name": "Doe",
                     "first_name": "John",
                     "birth_date": "1990-01-01",
                     "national_id": "FR000001",
-                    "total_points": 3,
-                    "tournament_points": 3
-                },
-                {
-                    "last_name": "Bernard",
-                    "first_name": "Paul",
-                    "birth_date": "1982-11-30",
-                    "national_id": "FR54321",
-                    "total_points": 11,
-                    "tournament_points": 3
-                },
-                {
-                    "last_name": "Martin",
-                    "first_name": "Claire",
-                    "birth_date": "1990-07-24",
-                    "national_id": "FR67890",
-                    "total_points": 13,
-                    "tournament_points": 3
+                    "total_points": 2,
+                    "tournament_points": 2
                 },
                 {
                     "last_name": "Dup",
@@ -1361,11 +1112,11 @@
                     "tournament_points": 2
                 },
                 {
-                    "last_name": "Lemoine",
-                    "first_name": "Sophie",
-                    "birth_date": "2000-01-01",
-                    "national_id": "FR24680",
-                    "total_points": 6,
+                    "last_name": "Dupont",
+                    "first_name": "Jean",
+                    "birth_date": "1985-03-12",
+                    "national_id": "FR12345",
+                    "total_points": 2,
                     "tournament_points": 2
                 },
                 {
@@ -1373,7 +1124,7 @@
                     "first_name": "Alice",
                     "birth_date": "1995-06-15",
                     "national_id": "FR98765",
-                    "total_points": 11,
+                    "total_points": 2,
                     "tournament_points": 2
                 },
                 {
@@ -1381,16 +1132,24 @@
                     "first_name": "John",
                     "birth_date": "1990-01-01",
                     "national_id": "123456",
-                    "total_points": 10,
+                    "total_points": 2,
+                    "tournament_points": 2
+                },
+                {
+                    "last_name": "Bernard",
+                    "first_name": "Paul",
+                    "birth_date": "1982-11-30",
+                    "national_id": "FR54321",
+                    "total_points": 1,
                     "tournament_points": 1
                 },
                 {
-                    "last_name": "Dupont",
-                    "first_name": "Jean",
-                    "birth_date": "1985-03-12",
-                    "national_id": "FR12345",
-                    "total_points": 12,
-                    "tournament_points": 0
+                    "last_name": "Martin",
+                    "first_name": "Claire",
+                    "birth_date": "1990-07-24",
+                    "national_id": "FR67890",
+                    "total_points": 1,
+                    "tournament_points": 1
                 }
             ]
         }

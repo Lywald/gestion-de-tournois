@@ -63,11 +63,11 @@ class Matchmaking:
         """
         all_round_winners = []
         for round_number in range(tournament.number_of_rounds):
-            self.menu_view.print_message(f"Starting Round {round_number + 1}")
+            self.menu_view.print_message(f"Début du tour {round_number + 1}")
 
             # Create matches for this round
             matches = self.create_matches(tournament.players)
-            new_round = Round(name=f"Round {round_number + 1}")
+            new_round = Round(name=f"Tour {round_number + 1}")
             new_round.matches = matches
             tournament.add_round(new_round)
 
@@ -77,45 +77,73 @@ class Matchmaking:
             # Sort players by points for the next round
             tournament.players.sort(key=lambda p: p.tournament_points, reverse=True)
 
-            # Determine the winners of this round (one winner per match)
-            round_winners = []
-            for match in matches:
-                if match.player2 is None:  # Bye match
-                    round_winners.append(match.player1)
-                    self.menu_view.print_message(
-                        f"Winner of Match (Bye): {match.player1.first_name} {match.player1.last_name}"
-                    )
-                elif match.score1 > match.score2:
-                    round_winners.append(match.player1)  # Player 1 wins
-                    self.menu_view.print_message(
-                        f"Winner of Match: {match.player1.first_name} {match.player1.last_name}"
-                    )
-                elif match.score2 > match.score1:
-                    round_winners.append(match.player2)  # Player 2 wins
-                    self.menu_view.print_message(
-                        f"Winner of Match: {match.player2.first_name} {match.player2.last_name}"
-                    )
-                else:
-                    # In case of a draw, both players are considered winners
-                    round_winners.extend([match.player1, match.player2])
-                    self.menu_view.print_message(
-                        f"Draw: {match.player1.first_name} {match.player1.last_name}"
-                        f"and {match.player2.first_name} {match.player2.last_name}"
-                    )
+            # Determine the winners of this round
+            round_winners = self.determine_round_winners(matches)
 
             # Add the winners of this round to the global list
             all_round_winners.append(round_winners)
 
             # Display the winners of this round
-            winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in round_winners)
-            self.menu_view.print_message(f"Winner(s) of Round {round_number + 1}: {winner_names}")
+            self.display_round_winners(round_number, round_winners)
 
         # Display the final scores of the tournament
-        self.menu_view.print_message("Tournament completed. Final scores:")
-        for player in tournament.players:
-            self.menu_view.print_message(f"{player.first_name} {player.last_name}: {player.tournament_points} points")
+        self.display_final_scores(tournament)
 
         return all_round_winners
+
+    def determine_round_winners(self, matches):
+        """
+        Determine the winners of the current round's matches.
+        Args:
+            matches (list): A list of Match objects.
+        Returns:
+            list: A list of winners for the current round.
+        """
+        round_winners = []
+        for match in matches:
+            if match.player2 is None:  # Bye match
+                round_winners.append(match.player1)
+                self.menu_view.print_message(
+                    f"Gagnant du match (exempté): {match.player1.first_name} {match.player1.last_name}"
+                )
+            elif match.score1 > match.score2:
+                round_winners.append(match.player1)  # Player 1 wins
+                self.menu_view.print_message(
+                    f"Gagnant du match: {match.player1.first_name} {match.player1.last_name}"
+                )
+            elif match.score2 > match.score1:
+                round_winners.append(match.player2)  # Player 2 wins
+                self.menu_view.print_message(
+                    f"Gagnant du match: {match.player2.first_name} {match.player2.last_name}"
+                )
+            else:
+                # In case of a draw, both players are considered winners
+                round_winners.extend([match.player1, match.player2])
+                self.menu_view.print_message(
+                    f"Égalité: {match.player1.first_name} {match.player1.last_name} "
+                    f"et {match.player2.first_name} {match.player2.last_name}"
+                )
+        return round_winners
+
+    def display_round_winners(self, round_number, round_winners):
+        """
+        Display the winners of the current round.
+        Args:
+            round_number (int): The round number.
+            round_winners (list): A list of winners for the current round.
+        """
+        winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in round_winners)
+        self.menu_view.print_message(f"Gagnant(s) du tour {round_number + 1}: {winner_names}")
+
+    def display_final_scores(self, tournament):
+        """
+        Display the final scores of the tournament.
+        Args:
+            tournament (Tournament): The tournament object.
+        """
+        self.menu_view.print_message("Tournoi terminé. Scores finaux :")
+        for player in tournament.players:
+            self.menu_view.print_message(f"{player.first_name} {player.last_name} : {player.tournament_points} points")
 
     def update_player_scores(self, matches):
         """

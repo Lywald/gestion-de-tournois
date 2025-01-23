@@ -14,7 +14,7 @@
             "birth_date": "1990-07-24",
             "national_id": "FR67890",
             "total_points": 13,
-            "tournament_points": 3
+            "tournament_points": 0
         },
         {
             "last_name": "Bernard",
@@ -22,7 +22,7 @@
             "birth_date": "1982-11-30",
             "national_id": "FR54321",
             "total_points": 11,
-            "tournament_points": 3
+            "tournament_points": 0
         },
         {
             "last_name": "Durand",
@@ -30,7 +30,7 @@
             "birth_date": "1995-06-15",
             "national_id": "FR98765",
             "total_points": 11,
-            "tournament_points": 2
+            "tournament_points": 0
         },
         {
             "last_name": "Lemoine",
@@ -38,7 +38,7 @@
             "birth_date": "2000-01-01",
             "national_id": "FR24680",
             "total_points": 6,
-            "tournament_points": 2
+            "tournament_points": 0
         },
         {
             "last_name": "Doe",
@@ -46,7 +46,7 @@
             "birth_date": "1990-01-01",
             "national_id": "123456",
             "total_points": 10,
-            "tournament_points": 1
+            "tournament_points": 0
         },
         {
             "last_name": "Doe",
@@ -54,7 +54,7 @@
             "birth_date": "1990-01-01",
             "national_id": "FR000001",
             "total_points": 3,
-            "tournament_points": 3
+            "tournament_points": 0
         },
         {
             "last_name": "Dup",
@@ -62,7 +62,7 @@
             "birth_date": "2020-01-01",
             "national_id": "FR000002",
             "total_points": 2,
-            "tournament_points": 2
+            "tournament_points": 0
         }
     ]
 }

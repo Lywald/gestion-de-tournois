@@ -124,7 +124,7 @@ class MenuView:
             winners (list): A list of players who won the round.
         """
         winner_names = ", ".join(f"{winner.first_name} {winner.last_name}" for winner in winners)
-        print(f"Winner(s) of Round {round_number}: {winner_names}")
+        print(f"Gagnant(s) du tour {round_number}: {winner_names}")
 
     def print_message(self, message):
         """
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     menu_view = MenuView()
     current_tournament = None
 
-    print("Bienveue dans le gestionnaire de tournois d'échecs!")
+    print("Bienvenue dans le gestionnaire de tournois d'échecs!")
 
     while True:
         choice = menu_view.main_menu(controller, current_tournament)
