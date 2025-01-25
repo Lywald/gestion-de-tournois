@@ -44,7 +44,7 @@ Bienvenue dans le gestionnaire de tournois d'échecs ! Ce projet vous permet de 
 
 1. Exécutez le script principal pour lancer l'application :
    ```bash
-   python view.py
+   python tournoi.py
    ```
 
 2. Utilisez les flèches haut et bas pour naviguer dans le menu principal et appuyez sur Entrée pour sélectionner une option.
@@ -52,7 +52,7 @@ Bienvenue dans le gestionnaire de tournois d'échecs ! Ce projet vous permet de 
 3. Suivez les instructions à l'écran pour créer des tournois, ajouter des joueurs, lancer des matchs, et générer des rapports.
 
 ## Structure du Projet
-
+- `tournoi.py` : Le point d'entrée de l'application.
 - `view.py` : Gère l'affichage du menu et les interactions avec l'utilisateur.
 - `controller.py` : Gère la logique de l'application et les interactions avec les données.
 - `models/` : Contient les classes de modèles pour les joueurs, les tournois, les tours, et les matchs.
