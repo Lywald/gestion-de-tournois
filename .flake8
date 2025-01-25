@@ -1,0 +1,15 @@
+[flake8]
+exclude = 
+    __pycache__/,
+    backups/,
+    .git/,
+    venv_tournoi/,
+    .gitattributes,
+    .gitignore,
+    .flake8,
+    data_players.json,
+    data_tournaments.json,
+    players_placeholder.json,
+    tournoiCdC.docx,
+    workspace.code-workspace
+max-line-length = 119

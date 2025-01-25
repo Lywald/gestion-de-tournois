@@ -60,6 +60,14 @@ Bienvenue dans le gestionnaire de tournois d'échecs ! Ce projet vous permet de 
 - `data_tournaments.json` : Fichier de données contenant les informations sur les tournois.
 - `data_players.json` : Fichier de données contenant les informations sur les joueurs.
 
+## Générer un rapport Flake8
+Pour générer un rapport Flake8 et vérifier la conformité du code aux standards PEP 8, exécutez la commande suivante :
+```sh
+flake8 --format=html --htmldir=rapport_flake8
+```
+Le rapport sera généré dans le dossier `rapport_flake8` et pourra être consulté dans un navigateur web.
+
+
 ## Auteur
 
 - **Pierre Igor Zarebski**
