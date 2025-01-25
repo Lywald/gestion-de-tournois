@@ -403,3 +403,143 @@ class Controller:
             ) for m in data["matches"]
         ]
         return round
+
+    def handle_choice_1(self, current_tournament):
+        """
+        Handle the choice to load a tournament.
+        Args:
+            current_tournament: The current tournament object.
+        Returns:
+            The loaded tournament object.
+        """
+        tournaments = self.get_all_tournaments()
+        if not tournaments:
+            print("Aucun tournoi disponible")
+        else:
+            for i, tournament in enumerate(tournaments):
+                print(f"{i + 1}. {tournament.name}")
+            index = int(input(f"Num. de tournoi (1-{len(tournaments)}): "))
+            index -= 1
+            print(" ")
+            print(" ")
+            if 0 <= index < len(tournaments):
+                current_tournament = tournaments[index]
+                self.menu_view.print_header(current_tournament)
+                self.filter_players_and_load_tours(index)
+            else:
+                print("Index invalide")
+            input()
+        return current_tournament
+
+    def handle_choice_2(self, current_tournament):
+        """
+        Handle the choice to load matches for a specific round.
+        Args:
+            current_tournament: The current tournament object.
+        """
+        if current_tournament is None:
+            print("Tournoi non sélectionné")
+            input()
+        else:
+            tour_index = int(input("Entrez l'index du tour: ")) - 1
+            tournament_index = self.tournaments_data.index(current_tournament)
+            self.load_matches(tournament_index, tour_index)
+            input()
+
+    def handle_choice_3(self):
+        """
+        Handle the choice to add a new player.
+        """
+        print()
+        print("Informations du joueur: (Echap ou entrée vide pour annuler)")
+        last_name = input("Entrez le nom de famille du joueur: ")
+        if len(last_name) == 0:
+            return
+        first_name = input("Entrez le prénom du joueur: ")
+        if len(first_name) == 0:
+            return
+        birth_date = input("Date de naissance du joueur (YYYY-MM-DD): ")
+        if len(birth_date) == 0:
+            return
+        national_id = input("Entrez l'identifiant national du joueur: ")
+        if len(national_id) == 0:
+            return
+        self.add_player(last_name, first_name, birth_date, national_id)
+
+    def handle_choice_4(self, current_tournament):
+        """
+        Handle the choice to add a new round to the loaded tournament.
+        Args:
+            current_tournament: The current tournament object.
+        """
+        if current_tournament is None:
+            print("Tournoi non sélectionné")
+            input()
+        else:
+            tournament_index = self.tournaments_data.index(current_tournament)
+            self.add_tour(tournament_index)
+
+    def handle_choice_5(self, current_tournament):
+        """
+        Handle the choice to run the tournament.
+        Args:
+            current_tournament: The current tournament object.
+        """
+        if current_tournament is None:
+            print("Tournoi non sélectionné")
+            input()
+        else:
+            tournament_index = self.tournaments_data.index(current_tournament)
+            self.run_tournament(tournament_index, self.menu_view.display_winner)
+
+    def handle_choice_6(self, current_tournament):
+        """
+        Handle the choice to display reports.
+        Args:
+            current_tournament: The current tournament object.
+        """
+        if current_tournament is None:
+            print("Tournoi non sélectionné")
+            input()
+        else:
+            while True:
+                print("\nRapports disponibles:")
+                print("1. Liste de tous les joueurs par ordre alphabétique")
+                print("2. Liste de tous les tournois")
+                print("3. Nom et dates du tournoi ouvert")
+                print("4. Liste des joueurs du tournoi par ordre alphabétique")
+                print("5. Liste de tous les tours du tournoi et de tous les matchs du tour")
+                print("6. Retour au menu principal")
+                choice = input("Choisissez une option: ")
+
+                if choice == '1':
+                    self.report_all_players()
+                elif choice == '2':
+                    self.report_all_tournaments()
+                elif choice == '3':
+                    self.report_tournament_details(current_tournament)
+                elif choice == '4':
+                    self.report_tournament_players(current_tournament)
+                elif choice == '5':
+                    self.report_tournament_rounds_and_matches(current_tournament)
+                elif choice == '6':
+                    break
+                else:
+                    print("Option invalide, veuillez réessayer.")
+
+    def handle_choice_7(self):
+        """
+        Handle the choice to quit the application.
+        Returns:
+            False to indicate the application should quit.
+        """
+        print("Au revoir!")
+        return False
+
+    def handle_choice_0(self):
+        """
+        Handle the choice to add a new tournament.
+        """
+        print()
+        name = input("Entrez le nom du tournoi: ")
+        self.add_tournament(name)
