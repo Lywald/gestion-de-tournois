@@ -61,9 +61,13 @@ Bienvenue dans le gestionnaire de tournois d'échecs ! Ce projet vous permet de 
 - `data_players.json` : Fichier de données contenant les informations sur les joueurs.
 
 ## Générer un rapport Flake8
-Pour générer un rapport Flake8 et vérifier la conformité du code aux standards PEP 8, exécutez la commande suivante :
+Pour générer un rapport Flake8 et vérifier la conformité du code aux standards PEP 8, exécutez une des commandes suivantes :
 ```sh
+flake8 . --exclude=venv_tournoi,__pycache__,backups --max-line-length=119
+Rapport dans le Powershell
+
 flake8 --format=html --htmldir=rapport_flake8
+Rapport dans un fichier
 ```
 Le rapport sera généré dans le dossier `rapport_flake8` et pourra être consulté dans un navigateur web.
 
